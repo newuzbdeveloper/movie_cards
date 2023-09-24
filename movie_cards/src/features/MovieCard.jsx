@@ -11,14 +11,14 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-function MovieCard({ title, overview, poster }) {
+function MovieCard() {
   return (
     <Card maxW="sm">
       <CardBody>
-        <Image src={poster} alt={`${title}'s photo`} borderRadius="lg" />
+        <Image borderRadius="lg" />
         <Stack mt="6" spacing="3">
-          <Heading size="md">{title}</Heading>
-          <Text>{overview}</Text>
+          <Heading size="md"></Heading>
+          <Text></Text>
         </Stack>
       </CardBody>
       <Divider />
