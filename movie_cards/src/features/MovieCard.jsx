@@ -10,6 +10,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { data } from "./data";
 
 function MovieCard() {
   return (
@@ -18,17 +19,14 @@ function MovieCard() {
         <Image borderRadius="lg" />
         <Stack mt="6" spacing="3">
           <Heading size="md"></Heading>
-          <Text></Text>
+          <Text>{data.title}</Text>
         </Stack>
       </CardBody>
       <Divider />
       <CardFooter>
         <ButtonGroup spacing="2">
           <Button variant="solid" colorScheme="blue">
-            Buy now
-          </Button>
-          <Button variant="ghost" colorScheme="blue">
-            Add to cart
+            Learn More
           </Button>
         </ButtonGroup>
       </CardFooter>

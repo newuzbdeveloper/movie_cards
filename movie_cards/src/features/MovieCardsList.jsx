@@ -1,6 +1,6 @@
 import { Heading, SimpleGrid } from "@chakra-ui/react";
 import MovieCard from "./MovieCard";
-import { MOVIEDB_IMAGES_URL } from "../common/constants";
+// import { MOVIEDB_IMAGES_URL } from "../common/constants";
 import { useSelector } from "react-redux";
 
 function MovieCardsList() {
@@ -17,7 +17,7 @@ function MovieCardsList() {
             key={movie.id}
             id={movie.id}
             title={movie.title}
-            poster={`${MOVIEDB_IMAGES_URL}/${movie.poster_path}`}
+            // poster={`${MOVIEDB_IMAGES_URL}/${movie.poster_path}`}
             overview={movie.overview}
           />
         ))}
