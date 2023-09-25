@@ -1,27 +1,41 @@
-import { Heading, SimpleGrid } from "@chakra-ui/react";
-import MovieCard from "./MovieCard";
-// import { MOVIEDB_IMAGES_URL } from "../common/constants";
 import { useSelector } from "react-redux";
+import { Box } from "@chakra-ui/react";
+import { selectAllMovies } from "./MovieCardSlice";
+import MovieCard from "./MovieCard";
+import { Heading } from "@chakra-ui/react";
+import { MOVIEDB_IMAGES_URL } from "../common/constants";
+// import { MOVIEDB_IMAGES_URL } from "../common/constants";
 
 function MovieCardsList() {
-  const movies = useSelector((state) => state.movies);
-  console.log(movies);
+  const movies = useSelector(selectAllMovies);
   return (
     <>
-      <Heading textAlign="center" size="xl" mb={4}>
-        Trending Movies
-      </Heading>
-      <SimpleGrid spacing={4} columns={{ sm: 1, md: 3, lg: 4 }}>
-        {movies.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            id={movie.id}
-            title={movie.title}
-            // poster={`${MOVIEDB_IMAGES_URL}/${movie.poster_path}`}
-            overview={movie.overview}
-          />
-        ))}
-      </SimpleGrid>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        gap={6}
+      >
+        <Heading mt={4}>Trending Movies.</Heading>
+        <Box
+          display="flex"
+          flexDirection="column"
+          gap={6}
+          alignItems="center"
+          justifyContent="center"
+        >
+          {movies?.map((movie) => (
+            <MovieCard
+              key={movie.id}
+              poster={`${MOVIEDB_IMAGES_URL}/${movie.poster_path}`}
+              title={movie.title ? movie.title : movie.name}
+              date={movie.release_date}
+              overview={movie.overview}
+            />
+          ))}
+        </Box>
+      </Box>
     </>
   );
 }

@@ -1,11 +1,11 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import MovieCards from "../features/MovieCard";
+import MovieCardsList from "../features/MovieCardsList";
 
 function App() {
   return (
     <>
       <ChakraProvider>
-        <MovieCards />
+        <MovieCardsList />
       </ChakraProvider>
     </>
   );

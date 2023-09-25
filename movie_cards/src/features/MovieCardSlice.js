@@ -7,10 +7,12 @@ import { data } from "./data";
 //   return data.data;
 // });
 
-export const movieCardSlice = createSlice({
-  name: "movieCards",
+const movieCardSlice = createSlice({
+  name: "movieCard",
   initialState: data.results,
   reducers: {},
 });
+
+export const selectAllMovies = (state) => state.movieCard;
 
 export default movieCardSlice.reducer;
