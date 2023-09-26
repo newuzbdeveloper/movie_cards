@@ -32,6 +32,7 @@ function MovieCardsList() {
               title={movie.title ? movie.title : movie.name}
               date={movie.release_date}
               overview={movie.overview}
+              backgroundPicture={`${MOVIEDB_IMAGES_URL}/${movie.backdrop_path}`}
             />
           ))}
         </Box>
