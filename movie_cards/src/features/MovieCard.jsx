@@ -1,4 +1,4 @@
-import { ChatIcon } from "@chakra-ui/icons";
+import { CiHeart, CiShare2, CiChat1 } from "react-icons/ci";
 import {
   Button,
   Card,
@@ -22,6 +22,10 @@ function MovieCard({ poster, title, date, overview }) {
       rounded="md"
       bg="whiteSmoke"
       borderRadius="10"
+      __hover={{
+        transform: translateY(50px) scale(1.2);
+      }}
+      transition="transform 0.3s"
     >
       <Image
         objectFit="cover"
@@ -42,7 +46,13 @@ function MovieCard({ poster, title, date, overview }) {
 
         <CardFooter>
           <Button variant="solid" bg="none">
-            <ChatIcon />
+            <CiShare2 size="sm" />
+          </Button>
+          <Button>
+            <CiHeart size="sm" />
+          </Button>
+          <Button>
+            <CiChat1 size="sm" />
           </Button>
         </CardFooter>
       </Stack>
