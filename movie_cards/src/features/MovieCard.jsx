@@ -1,5 +1,6 @@
 import { CiHeart, CiShare2, CiChat1 } from "react-icons/ci";
 import { Box, Button, Card, Heading, Image, Text } from "@chakra-ui/react";
+import { ImageCard } from "./styled";
 
 function MovieCard({ poster, title, date, overview, backgroundPicture }) {
   return (
@@ -8,17 +9,18 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
       overflow="hidden"
       variant="outline"
       w="60%"
-      h="35vh"
-      boxShadow="xl"
-      rounded="md"
+      h="45vh"
+      boxShadow="2xl"
+      borderRadius="15px"
       bg="whiteSmoke"
-      borderRadius="10"
-      __hover={{
-        transition: "transform 0.3s",
+      mb="6"
+      transition="transform .5s ease-out "
+      _hover={{
+        transform: "scale(1.03)",
         cursor: "pointer",
       }}
     >
-      <Box display="flex" flexDirection="column" gap="5" p={3} flex="1">
+      <Box display="flex" flexDirection="column" gap="5" p={3} minW="50%">
         <Box display="flex" gap={4}>
           <Image
             objectFit="cover"
@@ -28,12 +30,13 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
             boxSize="150px"
           />
           <Box>
-            <Heading size="lg">{title}</Heading>
+            <Heading size="md">{title}</Heading>
             <Text>{date}</Text>
           </Box>
         </Box>
         <Box
           display="flex"
+          h="100%"
           justifyContent="space-between"
           flexDirection="column"
         >
@@ -53,17 +56,7 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
           </Box>
         </Box>
       </Box>
-
-      <Box position="relative">
-        <Box position="absolute" float="left" width="100%" />
-        <Image
-          objectFit="contain"
-          display="block"
-          w="100%"
-          src={backgroundPicture}
-          h="100%"
-        />
-      </Box>
+      <ImageCard src={backgroundPicture} />
     </Card>
   );
 }
