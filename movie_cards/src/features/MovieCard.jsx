@@ -47,7 +47,7 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
             <Button variant="solid" bg="none" _hover={{ variant: "ghost" }}>
               <CiShare2 size="sm" />
             </Button>
-            <Button variant="solid" bg="none">
+            <Button variant="solid" bg="none" _hover={{ color: "black" }}>
               <CiHeart size="sm" />
             </Button>
             <Button variant="solid" bg="none">
