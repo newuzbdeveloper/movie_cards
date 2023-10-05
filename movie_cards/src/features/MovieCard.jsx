@@ -44,7 +44,7 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
             {overview.substring(0, 300) + "..."}
           </Text>
           <Box display="flex">
-            <Button variant="solid" bg="none">
+            <Button variant="solid" bg="none" _hover={{ variant: "ghost" }}>
               <CiShare2 size="sm" />
             </Button>
             <Button variant="solid" bg="none">
