@@ -41,16 +41,31 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
           flexDirection="column"
         >
           <Text py="2" size="xl" fontWeight="500" wordBreak="10">
-            {overview.substring(0, 300) + "..."}
+            {overview}
           </Text>
           <Box display="flex">
-            <Button variant="solid" bg="none" _hover={{ variant: "ghost" }}>
+            <Button
+              variant="solid"
+              bg="none"
+              transition="transform .5s ease-out"
+              _hover={{ transform: "scale(1.07)" }}
+            >
               <CiShare2 size="sm" />
             </Button>
-            <Button variant="solid" bg="none" _hover={{ color: "black" }}>
+            <Button
+              variant="solid"
+              bg="none"
+              transition="transform .5s ease-out"
+              _hover={{ transform: "scale(1.07)" }}
+            >
               <CiHeart size="sm" />
             </Button>
-            <Button variant="solid" bg="none">
+            <Button
+              variant="solid"
+              bg="none"
+              transition="transform .5s ease-out"
+              _hover={{ transform: "scale(1.07)" }}
+            >
               <CiChat1 size="sm" />
             </Button>
           </Box>

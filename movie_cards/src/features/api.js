@@ -11,4 +11,4 @@ axios.defaults.headers.common["Authorization"] = `Bearer ${
 axios.defaults.headers.common["accept"] = "application/json";
 
 export const fetchMovieCards = async () =>
-  await axios.get("/trending/movie/day?");
+  await axios.get("/trending/movie/day?language=en-US");

@@ -21,7 +21,7 @@ function MovieCardsList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await dispatch(fetchCards().unwrap());
+        await dispatch(fetchCards()).unwrap();
       } catch (err) {
         toast({
           title: "Error Occured.",
