@@ -29,7 +29,7 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
             alt={`${title}'s poster`}
             boxSize="150px"
           />
-          <Box>
+          <Box w="200px" h="100px">
             <Heading size="md">{title}</Heading>
             <Text>{date}</Text>
           </Box>
