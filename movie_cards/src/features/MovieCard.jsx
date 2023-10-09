@@ -20,7 +20,14 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
         cursor: "pointer",
       }}
     >
-      <Box display="flex" flexDirection="column" gap="5" p={3} minW="50%">
+      <Box
+        display="flex"
+        flexDirection="column"
+        gap="5"
+        p={3}
+        minW="50%"
+        maxH="100%"
+      >
         <Box display="flex" gap={4}>
           <Image
             objectFit="cover"
@@ -29,7 +36,7 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
             alt={`${title}'s poster`}
             boxSize="150px"
           />
-          <Box w="200px" h="100px">
+          <Box>
             <Heading size="md">{title}</Heading>
             <Text>{date}</Text>
           </Box>
