@@ -1,5 +1,13 @@
 import { CiHeart, CiShare2, CiChat1 } from "react-icons/ci";
-import { Box, Button, Card, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Button,
+  Card,
+  Heading,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import { ImageCard } from "./styled";
 
 function MovieCard({ poster, title, date, overview, backgroundPicture }) {
@@ -38,7 +46,11 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
           />
           <Box>
             <Heading size="md">{title}</Heading>
-            <Text>{date}</Text>
+            <Text>
+              <Badge variant="solid" colorScheme="green">
+                {date}
+              </Badge>
+            </Text>
           </Box>
         </Box>
         <Box
