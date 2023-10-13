@@ -8,7 +8,7 @@ import {
 } from "./MovieCardSlice";
 import MovieCard from "./MovieCard";
 import { Heading } from "@chakra-ui/react";
-import { MOVIEDB_IMAGES_URL } from "../common/constants";
+import { MOVIEDB_IMAGES_URL } from "../../common/constants";
 import { useEffect } from "react";
 
 function MovieCardsList() {

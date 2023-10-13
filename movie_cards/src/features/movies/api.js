@@ -1,5 +1,5 @@
 import axiosLib from "axios";
-import { MOVIEDB_API_URL } from "../common/constants";
+import { MOVIEDB_API_URL } from "../../common/constants";
 
 export const axios = axiosLib.create({
   baseURL: MOVIEDB_API_URL,

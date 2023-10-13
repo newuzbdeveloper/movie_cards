@@ -8,7 +8,6 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import { ImageCard } from "./styled";
 
 function MovieCard({ poster, title, date, overview, backgroundPicture }) {
   return (
@@ -27,6 +26,7 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
         transform: "scale(1.03)",
         cursor: "pointer",
       }}
+      sx={{}}
     >
       <Box
         display="flex"
@@ -43,6 +43,7 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
             src={poster}
             alt={`${title}'s poster`}
             boxSize="150px"
+            borderRadius="10px"
           />
           <Box>
             <Heading size="md">{title}</Heading>
@@ -69,7 +70,7 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
               transition="transform .5s ease-out"
               _hover={{ transform: "scale(1.07)" }}
             >
-              <CiShare2 size="sm" />
+              <CiShare2 />
             </Button>
             <Button
               variant="solid"
@@ -77,7 +78,7 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
               transition="transform .5s ease-out"
               _hover={{ transform: "scale(1.07)" }}
             >
-              <CiHeart size="sm" />
+              <CiHeart />
             </Button>
             <Button
               variant="solid"
@@ -85,12 +86,21 @@ function MovieCard({ poster, title, date, overview, backgroundPicture }) {
               transition="transform .5s ease-out"
               _hover={{ transform: "scale(1.07)" }}
             >
-              <CiChat1 size="sm" />
+              <CiChat1 />
             </Button>
           </Box>
         </Box>
       </Box>
-      <ImageCard src={backgroundPicture} />
+      <Image
+        src={backgroundPicture}
+        sx={{
+          WebkitMaskImage:
+            "-webkit -linear -gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, .7))",
+          maskimage:
+            " -webkit-linear-gradient(left,rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))",
+          borderRadius: "15px",
+        }}
+      />
     </Card>
   );
 }

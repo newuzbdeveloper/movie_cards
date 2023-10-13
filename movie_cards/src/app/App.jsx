@@ -1,5 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import MovieCardsList from "../features/MovieCardsList";
+import MovieCardsList from "../features/movies/MovieCardsList";
 
 function App() {
   return (
